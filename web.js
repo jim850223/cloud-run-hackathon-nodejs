@@ -16,7 +16,9 @@ app.post('/', function (req, res) {
   console.log("x is",xx);
   console.log("y is",yy);
   console.log("d is",dd);
-  const moves = ['F', 'T', 'L', 'R', 'T', 'T', 'T', 'T', 'T', 'T', 'T', 'T'];
+  //const moves = ['F', 'T', 'L', 'R', 'T', 'T', 'T', 'T', 'T', 'T', 'T', 'T'];
+  const moves = ['F', 'T', 'L', 'R'];
+  //const moves = ['T'];
   res.send(moves[Math.floor(Math.random() * moves.length)]);
 });
 
