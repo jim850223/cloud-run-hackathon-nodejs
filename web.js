@@ -9,7 +9,13 @@ app.get('/', function (req, res) {
 });
 
 app.post('/', function (req, res) {
-  console.log(req.body);
+  //console.log(req.body);
+  let xx = req.body.arena.state['https://cloud-run-hackathon-nodejs-5xk47kmhqq-uc.a.run.app'].x;
+  let yy = req.body.arena.state['https://cloud-run-hackathon-nodejs-5xk47kmhqq-uc.a.run.app'].y;
+  let dd = req.body.arena.state['https://cloud-run-hackathon-nodejs-5xk47kmhqq-uc.a.run.app'].direction;
+  console.log("x is",xx);
+  console.log("y is",yy);
+  console.log("d is",dd);
   const moves = ['F', 'T', 'L', 'R', 'T', 'T', 'T', 'T', 'T', 'T', 'T', 'T'];
   res.send(moves[Math.floor(Math.random() * moves.length)]);
 });
